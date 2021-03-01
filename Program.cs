@@ -6,13 +6,15 @@ namespace GuessingGame
     {
         static void Main()
         {
-            int secretNumber = 42;
+            var rand = new Random();
+            int secretNumber = rand.Next(1, 101);
+            Console.WriteLine(secretNumber);
             int parsedResponse;
             int numberOfGuesses = 0;
 
+            Console.WriteLine("Try to guess the secret number! (1-100)");
             while (numberOfGuesses <= 3)
             {
-                Console.WriteLine("Try to guess the secret number!");
                 Console.Write("What's your guess? ");
                 string response = Console.ReadLine();
 
