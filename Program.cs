@@ -8,7 +8,6 @@ namespace GuessingGame
         {
             var rand = new Random();
             int secretNumber = rand.Next(1, 101);
-            Console.WriteLine(secretNumber);
             int parsedResponse;
             int numberOfGuesses = 0;
 
@@ -32,11 +31,19 @@ namespace GuessingGame
                         numberOfGuesses++;
                         if (numberOfGuesses == 4)
                         {
-                            Console.WriteLine("You're all out of guesses!");
+                            Console.WriteLine($"You're all out of guesses! The secret number was: {secretNumber}");
                         }
                         else
                         {
                             Console.WriteLine($"Guesses Remaining: ({4 - numberOfGuesses})");
+                            if (parsedResponse > secretNumber)
+                            {
+                                Console.WriteLine("Your guess was too high!");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Your guess was too low!");
+                            }
                             Console.WriteLine();
                         }
                     }
