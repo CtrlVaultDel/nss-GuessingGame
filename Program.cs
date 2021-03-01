@@ -34,7 +34,7 @@ namespace GuessingGame
                         }
                         else
                         {
-                            Console.WriteLine($"Guesses Remaining: {numberOfGuesses}");
+                            Console.WriteLine($"Guesses Remaining: ({4 - numberOfGuesses})");
                             Console.WriteLine();
                         }
                     }
@@ -43,7 +43,7 @@ namespace GuessingGame
                 {
                     numberOfGuesses++;
                     Console.WriteLine("That is not a number! Try again!");
-                    Console.WriteLine($"Guesses Remaining: {numberOfGuesses}");
+                    Console.WriteLine($"Guesses Remaining: ({4 - numberOfGuesses})");
                     Console.WriteLine();
                 }
             }
