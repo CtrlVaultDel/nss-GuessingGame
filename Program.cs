@@ -110,7 +110,6 @@ namespace GuessingGame
                     // If the user guesses the incorrect number
                     else
                     {
-                        Console.WriteLine("No luck!");
                         numberOfGuesses++;
 
                         // If the user runs out of guesses
