@@ -52,24 +52,21 @@ namespace GuessingGame
                             case 1:
                                 allowedGuesses = 100;
                                 Console.WriteLine("You chose difficulty: Cheater");
-                                Console.WriteLine();
                                 break;
                             case 2:
                                 allowedGuesses = 8;
                                 Console.WriteLine("You chose difficulty: Easy");
-                                Console.WriteLine();
                                 break;
                             case 3:
                                 allowedGuesses = 6;
                                 Console.WriteLine("You chose difficulty: Medium");
-                                Console.WriteLine();
                                 break;
                             case 4:
                                 allowedGuesses = 4;
                                 Console.WriteLine("You chose difficulty: Hard");
-                                Console.WriteLine();
                                 break;
                         }
+                        Console.WriteLine();
                     }
                     else
                     {
@@ -85,6 +82,7 @@ namespace GuessingGame
             }
 
             Console.WriteLine("Try to guess the secret number! (1-100)");
+            Console.WriteLine();
 
             // Keep allowing the user to guess so long as they are under the allowable amount of guesses
             while (numberOfGuesses < allowedGuesses)
@@ -100,7 +98,12 @@ namespace GuessingGame
                     // If the user guesses the correct number
                     if (parsedResponse == secretNumber)
                     {
-                        Console.WriteLine("You guessed the right number!");
+                        Console.WriteLine(@"
+ ___ _   _  ___ ___ ___  ___ ___ 
+/ __| | | |/ __/ __/ _ \/ __/ __|
+\__ \ |_| | (_| (_|  __/\__ \__ \
+|___/\__,_|\___\___\___||___/___/
+                        ");
                         break;
                     }
 
